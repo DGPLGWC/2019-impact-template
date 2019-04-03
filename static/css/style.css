@@ -1,0 +1,237 @@
+html, body {
+  min-height: 100%; 
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important; 
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+
+}
+
+.wrapper * {
+    grid-column: col-start / span 12; 
+}
+
+.wrapper .nav {
+    display: flex;
+    align-items: center; 
+}
+
+.wrapper {
+  /* background-color: white; */
+    background-color: rgba(11, 19, 43, 1);
+    height: 100%;
+}
+
+.wrapper .nav {
+    background-color: rgba(11, 19, 43, 0.8);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    justify-content: space-between; 
+}
+.wrapper .nav .brandInfo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center; 
+}
+.wrapper .nav .brandInfo .name {
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 30px; 
+}
+.wrapper .nav .brandInfo .name a {
+    color: white;
+    text-decoration: none;
+}
+.wrapper .nav .brandInfo .name a:hover {
+    color: lime;
+    text-decoration: none;
+}
+.wrapper .nav .links {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center; 
+}
+.wrapper .nav .links ul {
+    list-style: none;
+    display: inline-flex; 
+}
+
+.wrapper .nav .links ul li {
+    color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    font-size: 20px; 
+}
+.wrapper .nav .links ul li:hover {
+    color: lime;
+    cursor: pointer; 
+}
+.wrapper .nav .links ul li a {
+    color: white;
+    text-decoration: none; 
+}
+.wrapper .nav .links ul li a:hover {
+    cursor: pointer;
+    color: lime; 
+}
+.wrapper .nav .menu-btn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px; 
+}
+.wrapper .nav .menu-btn .menu-toggle {
+    position: relative;
+    display: block;
+    margin: auto;
+    height: 25px;
+    width: 40px;
+    cursor: pointer; 
+}
+.wrapper .nav .menu-btn .menu-toggle .bars {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -2.5px;
+    transition: all .2s linear; 
+}
+.wrapper .nav .menu-btn .menu-toggle .bars:before, .wrapper .nav .menu-btn .menu-toggle .bars:after {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 2px;
+    content: "";
+    position: absolute;
+    transition: .2s linear; 
+}
+.wrapper .nav .menu-btn .menu-toggle .bars:before {
+    top: -10px; 
+}
+.wrapper .nav .menu-btn .menu-toggle .bars:after {
+    bottom: -10px; 
+}
+.wrapper .nav .menu-btn .active .bars {
+    background-color: transparent;
+    transition: all .2s linear; 
+}
+.wrapper .nav .menu-btn .active .bars:before {
+    top: 0;
+    transform: rotate(45deg); 
+}
+.wrapper .nav .menu-btn .active .bars:after {
+    bottom: 0;
+    transform: rotate(-45deg); 
+}
+.wrapper .nav.activeNav {
+    height: 100%;
+    width: 100%;
+    display: inline-block; 
+}
+.wrapper .nav.activeNav .brandInfo {
+    display: inline-block;
+    float: left; 
+}
+.wrapper .nav.activeNav .menu-btn {
+    display: inline-block;
+    float: right;
+    padding-top: 22px; 
+}
+.wrapper .nav.activeNav .links {
+    clear: both;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px; 
+}
+.wrapper .nav.activeNav .links ul {
+    list-style: none;
+    display: block; 
+}
+.wrapper .nav.activeNav .links ul li {
+    color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    font-size: 20px; 
+}
+.wrapper .nav.activeNav .links ul li:hover {
+    color: lime;
+    cursor: pointer; 
+}
+.wrapper .jumbotron {
+    height: 300px;
+    width: 100%;
+    background: #fff url("static/css/assets/sprinkles.png") no-repeat center;
+    margin-top: 75px; 
+    margin-bottom: 0;
+}
+
+.wrapper .content {
+    padding: 25px;
+    background-color: #fff;
+}
+
+.wrapper .footer {
+    background-color: #0063be;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; 
+}
+.wrapper .footer .credit {
+    color: white;
+    padding: 20px;
+    font-size: 15px; 
+}
+
+.wrapper hr {
+    border-top: 6px solid rgba(0,0,0,.1);
+    margin: 0;
+}
+
+@media (min-width: 500px) {
+    .nav, .jumbotron, .footer {
+        grid-column: col-start / span 12; 
+    }
+ }
+
+@media (min-width: 720px) {
+    .nav, .jumbotron, .footer {
+        grid-column: col-start / span 12; 
+    }
+    .wrapper .nav .links {
+        display: flex;
+    }
+
+    .wrapper .nav .links ul  {
+        margin-bottom: 0;
+    }
+
+    .wrapper .nav .menu-btn {
+        display: none;
+    }
+}

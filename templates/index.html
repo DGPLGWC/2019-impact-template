@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- The head is for declaring all of the important information about your site -->
+    
+    <!-- charset specifies what character set you're using (https://www.w3schools.com/tags/att_meta_charset.asp) -->
+	<meta charset="utf-8">
+    <!-- viewport tells the browser what to make visible to the user when it first loads (https://www.w3schools.com/css/css_rwd_viewport.asp) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- We can use Bootstraps CSS files without downloading them using a cdn (Content Delivery Network) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Importing google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|PT+Sans:400,700" rel="stylesheet">
+    
+    <!-- The title tag sets the title of your tab -->
+	<title>GWC Tab Title</title>
+
+    <!-- This brings in our external stylesheet so we don't have to put our css in our html page -->
+	<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- NAVBAR -->
+        <div class="nav">
+            <div class="brandInfo"><div class="name" ><a href="#toTop">GWC</a></div></div>
+            <div class="menu-btn">
+                <div class="menu-toggle" onClick="toggleActive();">
+                    <span class="bars"></span>
+                </div>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#toTop">General</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- JUMBOTRON/HEADER -->
+        <div id="toTop" class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+
+        <!-- BODY CONTENT -->
+        <!-- Please remove the inline css and make any changes you want in the style.css -->
+        <div id="about" class="content" style="height: 400px; border: 5px solid lime;">
+            <h1>This is a Box!</h1>
+        </div>
+        <div id="faq" class="content" style="height: 400px; border: 5px solid magenta;">
+            <h2>This is the next Box!</h2>
+        </div>
+        <div id="contact" class="content" style="height: 400px; border: 5px solid cyan;">
+            <h4>I am the last box!</h4>
+            <p>I have more info in my box.</p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="credit">
+                &copy; 2019 DGPL GIRLS WHO CODE - TEAM NAME
+            </div>
+        </div>
+    </div>
+
+
+    <!-- We want to keep our script tags at the bottom of our body tag so they load last. Keep in mind that javascript loads in the order you declare it in this page. -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="static/js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
